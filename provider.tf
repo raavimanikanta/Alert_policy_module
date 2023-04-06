@@ -9,8 +9,8 @@ terraform {
 
 # Configure the New Relic provider
 provider "newrelic" {
-  for_each=var.provider_data
-  account_id = each.value.Account_id
-  api_key    = each.value.Api_key   # Usually prefixed with 'NRAK'
-  region     = each.value.Region                   # Valid regions are US and EU
+  
+  account_id = var.account_id
+  api_key    = var.Account_Api_Key   # Usually prefixed with 'NRAK'
+  region     = var.Account_region                   # Valid regions are US and EU
 }
