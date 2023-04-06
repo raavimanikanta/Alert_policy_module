@@ -15,4 +15,8 @@ variable "Account_region" {
   type=string
 }
 
+variable "policy_id" {
+  type=string
+}
+
 
